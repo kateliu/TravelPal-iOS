@@ -1,5 +1,5 @@
 //
-//  TPViewController.h
+//  TPPhotoViewController.h
 //  TravelPal
 //
 //  Created by Xiao Xiao on 9/21/13.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPViewController : UIViewController
-
-- (IBAction)nextView:(id)sender;
-
+@interface TPPhotoViewController : UIViewController
 
 @end

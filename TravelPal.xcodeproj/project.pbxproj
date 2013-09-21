@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00479F5317EE56D600199C21 /* TPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00479F5117EE56D600199C21 /* TPViewController.m */; };
+		00479F5417EE56D600199C21 /* TPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F5217EE56D600199C21 /* TPViewController.xib */; };
+		00479F5D17EE577E00199C21 /* TPPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00479F5B17EE577E00199C21 /* TPPhotoViewController.m */; };
+		00479F5E17EE577E00199C21 /* TPPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F5C17EE577E00199C21 /* TPPhotoViewController.xib */; };
 		44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3617EE51AA007548C5 /* CoreGraphics.framework */; };
@@ -16,8 +20,6 @@
 		44FCDC4517EE51AA007548C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC4417EE51AA007548C5 /* Default.png */; };
 		44FCDC4717EE51AA007548C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC4617EE51AA007548C5 /* Default@2x.png */; };
 		44FCDC4917EE51AA007548C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC4817EE51AA007548C5 /* Default-568h@2x.png */; };
-		44FCDC4C17EE51AA007548C5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC4A17EE51AA007548C5 /* MainStoryboard.storyboard */; };
-		44FCDC4F17EE51AA007548C5 /* TPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC4E17EE51AA007548C5 /* TPViewController.m */; };
 		44FCDC5717EE51AA007548C5 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC5617EE51AA007548C5 /* SenTestingKit.framework */; };
 		44FCDC5817EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC5917EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
@@ -36,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00479F5017EE56D600199C21 /* TPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
+		00479F5117EE56D600199C21 /* TPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPViewController.m; sourceTree = "<group>"; };
+		00479F5217EE56D600199C21 /* TPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPViewController.xib; sourceTree = "<group>"; };
+		00479F5A17EE577E00199C21 /* TPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPhotoViewController.h; sourceTree = "<group>"; };
+		00479F5B17EE577E00199C21 /* TPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPhotoViewController.m; sourceTree = "<group>"; };
+		00479F5C17EE577E00199C21 /* TPPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPPhotoViewController.xib; sourceTree = "<group>"; };
 		44FCDC2F17EE51AA007548C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC3217EE51AA007548C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44FCDC3417EE51AA007548C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,9 +57,6 @@
 		44FCDC4417EE51AA007548C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		44FCDC4617EE51AA007548C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		44FCDC4817EE51AA007548C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		44FCDC4B17EE51AA007548C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		44FCDC4D17EE51AA007548C5 /* TPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
-		44FCDC4E17EE51AA007548C5 /* TPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPViewController.m; sourceTree = "<group>"; };
 		44FCDC5517EE51AA007548C5 /* TravelPalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelPalTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC5617EE51AA007548C5 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		44FCDC5E17EE51AA007548C5 /* TravelPalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TravelPalTests-Info.plist"; sourceTree = "<group>"; };
@@ -117,11 +122,14 @@
 		44FCDC3817EE51AA007548C5 /* TravelPal */ = {
 			isa = PBXGroup;
 			children = (
+				00479F5A17EE577E00199C21 /* TPPhotoViewController.h */,
+				00479F5B17EE577E00199C21 /* TPPhotoViewController.m */,
+				00479F5C17EE577E00199C21 /* TPPhotoViewController.xib */,
+				00479F5017EE56D600199C21 /* TPViewController.h */,
+				00479F5117EE56D600199C21 /* TPViewController.m */,
+				00479F5217EE56D600199C21 /* TPViewController.xib */,
 				44FCDC4117EE51AA007548C5 /* TPAppDelegate.h */,
 				44FCDC4217EE51AA007548C5 /* TPAppDelegate.m */,
-				44FCDC4A17EE51AA007548C5 /* MainStoryboard.storyboard */,
-				44FCDC4D17EE51AA007548C5 /* TPViewController.h */,
-				44FCDC4E17EE51AA007548C5 /* TPViewController.m */,
 				44FCDC3917EE51AA007548C5 /* Supporting Files */,
 			);
 			path = TravelPal;
@@ -236,7 +244,8 @@
 				44FCDC4517EE51AA007548C5 /* Default.png in Resources */,
 				44FCDC4717EE51AA007548C5 /* Default@2x.png in Resources */,
 				44FCDC4917EE51AA007548C5 /* Default-568h@2x.png in Resources */,
-				44FCDC4C17EE51AA007548C5 /* MainStoryboard.storyboard in Resources */,
+				00479F5417EE56D600199C21 /* TPViewController.xib in Resources */,
+				00479F5E17EE577E00199C21 /* TPPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +282,8 @@
 			files = (
 				44FCDC3F17EE51AA007548C5 /* main.m in Sources */,
 				44FCDC4317EE51AA007548C5 /* TPAppDelegate.m in Sources */,
-				44FCDC4F17EE51AA007548C5 /* TPViewController.m in Sources */,
+				00479F5317EE56D600199C21 /* TPViewController.m in Sources */,
+				00479F5D17EE577E00199C21 /* TPPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +312,6 @@
 				44FCDC3C17EE51AA007548C5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		44FCDC4A17EE51AA007548C5 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44FCDC4B17EE51AA007548C5 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		44FCDC5F17EE51AA007548C5 /* InfoPlist.strings */ = {
@@ -454,6 +456,7 @@
 				44FCDC6917EE51AA007548C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44FCDC6A17EE51AA007548C5 /* Build configuration list for PBXNativeTarget "TravelPalTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +465,7 @@
 				44FCDC6C17EE51AA007548C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

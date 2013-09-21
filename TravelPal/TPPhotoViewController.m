@@ -1,19 +1,18 @@
 //
-//  TPViewController.m
+//  TPPhotoViewController.m
 //  TravelPal
 //
 //  Created by Xiao Xiao on 9/21/13.
 //  Copyright (c) 2013 ok. All rights reserved.
 //
 
-#import "TPViewController.h"
 #import "TPPhotoViewController.h"
 
-@interface TPViewController ()
+@interface TPPhotoViewController ()
 
 @end
 
-@implementation TPViewController
+@implementation TPPhotoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,13 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)nextView:(id)sender
-{
-    TPPhotoViewController *photoViewController = [[TPPhotoViewController alloc] initWithNibName:@"TPPhotoViewController" bundle:nil];
-    [self.navigationController pushViewController:photoViewController animated:YES];
-
 }
 
 @end
