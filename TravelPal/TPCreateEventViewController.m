@@ -73,11 +73,11 @@
 
 -(IBAction)doneEvent:(id)sender
 {
-    NSString *post = [NSString stringWithFormat:@"description=%@&id=%@", self.desc.text, self.eventId];
+    NSString *post = [NSString stringWithFormat:@"description=%@", self.desc.text];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:[TPUrl createEventUrl:_travelId]]];
+    [request setURL:[NSURL URLWithString:[TPUrl updateEventUrl:_eventId]]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
@@ -112,5 +112,6 @@
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
+
 
 @end
