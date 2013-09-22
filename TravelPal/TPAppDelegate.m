@@ -19,10 +19,11 @@
     // Override point for customization after application launch.
     self.viewController = [[TPViewController alloc] initWithNibName:@"TPViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-
+    navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navigationController;
+
     [self.window makeKeyAndVisible];
 
     return YES;

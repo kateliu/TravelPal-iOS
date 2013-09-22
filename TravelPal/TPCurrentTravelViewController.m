@@ -31,14 +31,26 @@
     [super viewDidLoad];
     self.title = @"My Travel";
     NSString *eventsUrl = [TPUrl travelEventsUrl:_travelId];
-    NSLog(@"%@", eventsUrl);
     TPHttpRequest *request = [[TPHttpRequest alloc] init];
-    NSArray *data = nil;
-    _events = [[NSArray alloc] init];
-    [request getFromURLArray:eventsUrl returningJson:&data];
-    _events = data;
-    NSLog(@"%@", _events);
+    _events = [request getJsonFromUrl: eventsUrl];
     [_eventsTable reloadData];
+    [self loadEvents];
+}
+
+- (void)loadEvents
+{
+    for (NSString *eventId in _events) {
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:[TPUrl getEventUrl:eventId]]];
+        [request setHTTPMethod:@"GET"];
+        NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+        if (conn) {
+            NSLog(@"Connection Successful");
+        }
+        else {
+            NSLog(@"Connection could not be made");
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,7 +76,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[_events objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    cell.textLabel.text = @"Loading...";
     
     return cell;
 }
@@ -99,8 +111,21 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
 {
-    UINavigationController *navController = self.navigationController;
-    [navController popViewControllerAnimated:YES];
+    NSError *error = nil;
+    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if ([jsonData objectForKey:@"expenses"]) {
+        for (int i = 0; i < [_events count]; i++) {
+            if ([[_events objectAtIndex:i] isEqualToString:[jsonData objectForKey:@"id"]]) {
+                UITableViewCell *cell = [_eventsTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+                cell.textLabel.text = [jsonData objectForKey:@"description"];
+                break;
+            }
+        }
+    }
+    else {
+        UINavigationController *navController = self.navigationController;
+        [navController popViewControllerAnimated:YES];
+    }
 }
 
 
