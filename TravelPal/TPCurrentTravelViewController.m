@@ -30,7 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"My Travel";
+    self.title = @"Trip to Florida";
+    self.endTripButton.backgroundColor = [UIColor greenColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -80,10 +81,11 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.accessoryType=UITableViewCellAccessoryDetailDisclosureButton;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell.accessoryType=UITableViewCellAccessoryDetailButton;
     }
     cell.textLabel.text = @"Loading...";
+    cell.detailTextLabel.text = @"$0.00";
     
     return cell;
 }
@@ -125,6 +127,7 @@
             if ([[_events objectAtIndex:i] isEqualToString:[jsonData objectForKey:@"id"]]) {
                 UITableViewCell *cell = [_eventsTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
                 cell.textLabel.text = [jsonData objectForKey:@"description"];
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"$%d", (arc4random()%100)+10];
                 break;
             }
         }
@@ -144,7 +147,9 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Events in this trip";
+}
 
 @end

@@ -10,6 +10,9 @@
 
 @interface TPEventViewController ()
 
+@property (nonatomic, strong) NSString *eventDescription;
+@property int iconId;
+
 @end
 
 @implementation TPEventViewController
@@ -28,10 +31,11 @@
     [super viewDidLoad];
     self.title = @"Event Detail";
     _expenses = [[NSMutableArray alloc] init];
-    _descLabel.text = [_event objectForKey:@"description"];
+    self.eventDescription = [_event objectForKey:@"description"];
     for (NSString *key in [[_event objectForKey:@"expenses"] allKeys]) {
         [_expenses addObject:[[_event objectForKey:@"expenses"] objectForKey:key]];
     }
+    self.iconId = 0;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -56,13 +60,23 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     cell.textLabel.text = [[_expenses objectAtIndex:indexPath.row] objectForKey:@"description"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$ %@", [[_expenses objectAtIndex:indexPath.row] objectForKey:@"cost"]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%d.png", self.iconId]];
+    self.iconId = (self.iconId + 1)%4;
     return cell;
 }
 
+-(IBAction)splitMoney:(id)sender
+{
+    
+}
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"Expenses for %@", self.eventDescription];
+}
 
 @end
