@@ -217,6 +217,24 @@
 					</object>
 					<int key="connectionID">44</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">createEvent:</string>
+						<reference key="source" ref="102170486"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">53</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">endTravel:</string>
+						<reference key="source" ref="779722111"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -262,7 +280,7 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="124048968">
+							<object class="IBNSLayoutConstraint" id="220747405">
 								<reference key="firstItem" ref="191373211"/>
 								<int key="firstAttribute">4</int>
 								<int key="relation">0</int>
@@ -396,7 +414,7 @@
 						<int key="objectID">4</int>
 						<reference key="object" ref="438094476"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="114810371">
+							<object class="IBNSLayoutConstraint" id="921991806">
 								<reference key="firstItem" ref="438094476"/>
 								<int key="firstAttribute">8</int>
 								<int key="relation">0</int>
@@ -511,7 +529,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">42</int>
-						<reference key="object" ref="124048968"/>
+						<reference key="object" ref="220747405"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -521,7 +539,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">51</int>
-						<reference key="object" ref="114810371"/>
+						<reference key="object" ref="921991806"/>
 						<reference key="parent" ref="438094476"/>
 					</object>
 				</array>
@@ -539,7 +557,7 @@
 					<reference ref="485214882"/>
 					<reference ref="52050397"/>
 					<reference ref="920457794"/>
-					<reference ref="124048968"/>
+					<reference ref="220747405"/>
 					<reference ref="210110033"/>
 					<reference ref="1033713421"/>
 				</array>
@@ -561,7 +579,7 @@
 				<string key="36.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array class="NSMutableArray" key="4.IBViewMetadataConstraints">
-					<reference ref="114810371"/>
+					<reference ref="921991806"/>
 				</array>
 				<boolean value="NO" key="4.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -575,7 +593,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">51</int>
+			<int key="maxID">53</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -590,6 +608,20 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">TPCurrentTravelViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="createEvent:">id</string>
+						<string key="endTravel:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="createEvent:">
+							<string key="name">createEvent:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="endTravel:">
+							<string key="name">endTravel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">_eventsTable</string>
 						<string key="NS.object.0">UITableView</string>

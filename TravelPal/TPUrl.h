@@ -14,5 +14,7 @@
 +(NSString *) eventsUrl;
 +(NSString *) usersUrl;
 +(NSString *) travelEventsUrl: (NSString *)travelId;
++(NSString *) endTravelUrl: (NSString *)travelId;
++(NSString *) createEventUrl: (NSString *)travelId;
 
 @end
