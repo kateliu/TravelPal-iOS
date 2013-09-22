@@ -14,5 +14,6 @@
 @interface TPMapViewController : UIViewController
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) NSString *travelId;
+@property (nonatomic, strong) NSArray *eventIds;
 @property (nonatomic, strong) NSArray *annotations;
 @end

@@ -21,19 +21,20 @@
 
 - (NSString *)title
 {
-    return [self.event objectForKey:EVENT_TITLE];
+    return [self.event objectForKey:[TPEvent eventTitle]];
 }
 
 - (NSString *)subtitle
 {
-    return [self.event objectForKey:EVENT_DESCRIPTION];
+    return @"";
 }
 
 - (CLLocationCoordinate2D)coordinate
 {
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude = [[self.event objectForKey:EVENT_LATITUDE] doubleValue];
-    coordinate.longitude = [[self.event objectForKey:EVENT_LONGITUDE] doubleValue];
+    NSArray *coordinateValues = [self.event objectForKey:[TPEvent eventCoordinate]];
+    coordinate.latitude = [coordinateValues[0] doubleValue];
+    coordinate.longitude = [coordinateValues[1] doubleValue];
     return coordinate;
 }
 

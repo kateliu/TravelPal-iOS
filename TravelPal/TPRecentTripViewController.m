@@ -8,8 +8,10 @@
 
 #import "TPRecentTripViewController.h"
 
+#import "TPAnnotation.h"
 #import "TPHttpRequest.h"
 #import "TPMapViewController.h"
+#import "TPUrl.h"
 
 @interface TPRecentTripViewController ()
 
@@ -104,11 +106,25 @@
 
 #pragma mark - Table view delegate
 
+- (NSArray *)annotationsFromEventIds:(NSArray *)eventIds
+{
+    int count = [eventIds count];
+    NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:count];
+    for (NSString *eventId in eventIds) {
+        NSString *eventUrl = [[TPUrl eventsUrl] stringByAppendingString:eventId];
+        NSDictionary *eventInfo = [self.httpRequest getJsonFromUrl:eventUrl];
+        [annotations addObject:[TPAnnotation annotationForEvent:eventInfo]];
+    }
+    return annotations;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TPMapViewController *mapViewController = [[TPMapViewController alloc] initWithNibName:@"TPMapViewController" bundle:nil];
     int rowId = [indexPath row];
     mapViewController.travelId = [self.travelList[rowId] objectForKey:@"id"];
+    mapViewController.eventIds = [self.travelList[rowId] objectForKey:@"events"];
+    mapViewController.annotations = [self annotationsFromEventIds:mapViewController.eventIds];
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
