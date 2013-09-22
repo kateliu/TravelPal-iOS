@@ -14,8 +14,7 @@
 }
 
 @property (nonatomic, retain) UILabel *descLabel;
-@property (nonatomic, strong) UITableView *_tableView;
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSDictionary *event;
-
 
 @end
