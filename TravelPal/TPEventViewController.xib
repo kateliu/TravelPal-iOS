@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPEventViewController">
             <connections>
                 <outlet property="_descLabel" destination="D0o-PN-d16" id="0Fx-FL-DUy"/>
-                <outlet property="_tableView" destination="fYN-cR-MLM" id="Djf-KL-9E9"/>
+                <outlet property="_tableView" destination="fYN-cR-MLM" id="KkA-op-iTo"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
