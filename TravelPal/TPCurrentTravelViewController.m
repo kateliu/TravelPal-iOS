@@ -10,6 +10,7 @@
 #import "TPUrl.h"
 #import "TPHttpRequest.h"
 #import "TPCreateEventViewController.h"
+#import "TPEventViewController.h"
 
 @interface TPCurrentTravelViewController ()
 
@@ -80,6 +81,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.accessoryType=UITableViewCellAccessoryDetailDisclosureButton;
     }
     cell.textLabel.text = @"Loading...";
     
@@ -132,6 +134,17 @@
         [navController popViewControllerAnimated:YES];
     }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *eventId = [_events objectAtIndex:indexPath.row];
+    TPEventViewController *controller = [[TPEventViewController alloc] initWithNibName:@"TPEventViewController" bundle:nil];
+    TPHttpRequest *request = [[TPHttpRequest alloc] init];
+    controller.event = [request getJsonFromUrl:[TPUrl getEventUrl:eventId]];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+
 
 
 @end

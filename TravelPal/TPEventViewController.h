@@ -16,6 +16,7 @@
 @property (nonatomic, retain) UILabel *descLabel;
 @property (nonatomic, strong) UITableView *_tableView;
 @property (nonatomic, strong) NSDictionary *event;
+@property (nonatomic, strong) NSMutableArray *expenses;
 
 
 @end

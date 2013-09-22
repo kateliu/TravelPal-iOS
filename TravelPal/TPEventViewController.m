@@ -26,6 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _expenses = [[NSMutableArray alloc] init];
+    _descLabel.text = [_event objectForKey:@"description"];
+    for (NSString *key in [[_event objectForKey:@"expenses"] allKeys]) {
+        [_expenses addObject:[[_event objectForKey:@"expenses"] objectForKey:key]];
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -42,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[_event objectForKey:@"expenses"] count];
+    return [_expenses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,7 +57,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[[_event objectForKey:@"expenses"] objectAtIndex:indexPath.row] objectForKey:@"decription"];
+    cell.textLabel.text = [[_expenses objectAtIndex:indexPath.row] objectForKey:@"description"];
     return cell;
 }
 
