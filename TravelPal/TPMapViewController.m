@@ -13,9 +13,21 @@
 
 @interface TPMapViewController () <MKMapViewDelegate>
 
+@property (nonatomic, strong) TPHttpRequest *httpRequest;
+
 @end
 
 @implementation TPMapViewController
+
+-(id) init
+{
+    self = [super init];
+    if (self) {
+        _httpRequest = [[TPHttpRequest alloc] init];
+    }
+    return self;
+}
+
 
 - (void)updateMapView
 {
@@ -69,27 +81,32 @@
     return self;
 }
 
-- (NSDictionary *)detailInTravel
-{
+//- (NSArray *)travelList
+//{
+//    NSString *userUrl = [[TPUrl usersUrl] stringByAppendingString:self.userId];
+//    
+//}
+
+//- (NSDictionary *)detailsInTravel
+//{
 //    NSString *travelUrl = [[TPUrl travelsUrl] stringByAppendingString:self.travelID];
 //    NSDictionary *json = [NSDictionary dictionary];
-//    [self.httpRequest getFromURL:url returningJson:&json];
+//    [self.httpRequest getFromURL:travelUrl returningJson:&json];
 //    if (!json) {
 //        return NO;
 //    }
+//    NSLog(@"travel json: %@", json);
+//    return nil;
+//}
 //
-    return nil;
-}
-
-- (NSDictionary *)detailInEvent:(NSString *)eventId
-{
-    return nil;
-}
+//- (NSDictionary *)detailsInEvent:(NSString *)eventId
+//{
+//    return nil;
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.travelID = @"-J42aiKDIcGz24EDoif3";
 
 //    MKCoordinateRegion mapRegion;
 //    CLLocationCoordinate2D coordinate;

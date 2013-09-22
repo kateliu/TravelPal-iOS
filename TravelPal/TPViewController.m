@@ -9,10 +9,16 @@
 #import "TPViewController.h"
 
 #import "TPCurrentTravelViewController.h"
+#import "TPHttpRequest.h"
 #import "TPRecentTripViewController.h"
+#import "TPUrl.h"
 
 
 @interface TPViewController ()
+
+@property (nonatomic, strong) TPHttpRequest *httpRequest;
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSString *urlForTravelList;
 
 @end
 
@@ -22,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        _httpRequest = [[TPHttpRequest alloc] init];
     }
     return self;
 }
@@ -30,7 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.userId = @"Sean"; //TODO: get developer Id programmatically.
+    self.urlForTravelList = [[TPUrl usersUrl] stringByAppendingString:self.userId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +79,8 @@
 - (IBAction)recentTravel:(id)sender
 {
     TPRecentTripViewController *recentTripViewController = [[TPRecentTripViewController alloc] initWithNibName:@"TPRecentTripViewController" bundle:nil];
+    recentTripViewController.travelList = [self.httpRequest getJsonFromUrl:self.urlForTravelList];
+    NSLog(@"travel list: %@", recentTripViewController.travelList);
     [self.navigationController pushViewController:recentTripViewController animated:YES];
 }
 

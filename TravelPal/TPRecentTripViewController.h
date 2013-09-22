@@ -10,7 +10,7 @@
 
 @interface TPRecentTripViewController : UITableViewController
 
-
-@property (nonatomic, strong) NSArray* tripData;
+@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSArray* travelList;
 
 @end
