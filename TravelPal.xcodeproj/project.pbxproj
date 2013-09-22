@@ -25,6 +25,11 @@
 		44FCDC5917EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC6117EE51AA007548C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC5F17EE51AA007548C5 /* InfoPlist.strings */; };
 		44FCDC6417EE51AA007548C5 /* TravelPalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC6317EE51AA007548C5 /* TravelPalTests.m */; };
+		44FCDC7517EE5C9C007548C5 /* TPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC7317EE5C9C007548C5 /* TPMapViewController.m */; };
+		44FCDC7617EE5C9C007548C5 /* TPMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FCDC7417EE5C9C007548C5 /* TPMapViewController.xib */; };
+		44FCDC7817EE6B83007548C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC7717EE6B83007548C5 /* MapKit.framework */; };
+		44FCDC7B17EE6E95007548C5 /* TPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */; };
+		44FCDC7E17EE706A007548C5 /* TPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC7D17EE706A007548C5 /* TPEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,14 @@
 		44FCDC6017EE51AA007548C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44FCDC6217EE51AA007548C5 /* TravelPalTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelPalTests.h; sourceTree = "<group>"; };
 		44FCDC6317EE51AA007548C5 /* TravelPalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelPalTests.m; sourceTree = "<group>"; };
+		44FCDC7217EE5C9C007548C5 /* TPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMapViewController.h; sourceTree = "<group>"; };
+		44FCDC7317EE5C9C007548C5 /* TPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMapViewController.m; sourceTree = "<group>"; };
+		44FCDC7417EE5C9C007548C5 /* TPMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPMapViewController.xib; sourceTree = "<group>"; };
+		44FCDC7717EE6B83007548C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44FCDC7917EE6E95007548C5 /* TPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAnnotation.h; sourceTree = "<group>"; };
+		44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAnnotation.m; sourceTree = "<group>"; };
+		44FCDC7C17EE706A007548C5 /* TPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPEvent.h; sourceTree = "<group>"; };
+		44FCDC7D17EE706A007548C5 /* TPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FCDC7817EE6B83007548C5 /* MapKit.framework in Frameworks */,
 				44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */,
 				44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */,
 				44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +106,7 @@
 		44FCDC2617EE51AA007548C5 = {
 			isa = PBXGroup;
 			children = (
+				44FCDC7717EE6B83007548C5 /* MapKit.framework */,
 				44FCDC3817EE51AA007548C5 /* TravelPal */,
 				44FCDC5C17EE51AA007548C5 /* TravelPalTests */,
 				44FCDC3117EE51AA007548C5 /* Frameworks */,
@@ -131,6 +146,13 @@
 				44FCDC4117EE51AA007548C5 /* TPAppDelegate.h */,
 				44FCDC4217EE51AA007548C5 /* TPAppDelegate.m */,
 				44FCDC3917EE51AA007548C5 /* Supporting Files */,
+				44FCDC7217EE5C9C007548C5 /* TPMapViewController.h */,
+				44FCDC7317EE5C9C007548C5 /* TPMapViewController.m */,
+				44FCDC7417EE5C9C007548C5 /* TPMapViewController.xib */,
+				44FCDC7917EE6E95007548C5 /* TPAnnotation.h */,
+				44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */,
+				44FCDC7C17EE706A007548C5 /* TPEvent.h */,
+				44FCDC7D17EE706A007548C5 /* TPEvent.m */,
 			);
 			path = TravelPal;
 			sourceTree = "<group>";
@@ -246,6 +268,7 @@
 				44FCDC4917EE51AA007548C5 /* Default-568h@2x.png in Resources */,
 				00479F5417EE56D600199C21 /* TPViewController.xib in Resources */,
 				00479F5E17EE577E00199C21 /* TPPhotoViewController.xib in Resources */,
+				44FCDC7617EE5C9C007548C5 /* TPMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +307,9 @@
 				44FCDC4317EE51AA007548C5 /* TPAppDelegate.m in Sources */,
 				00479F5317EE56D600199C21 /* TPViewController.m in Sources */,
 				00479F5D17EE577E00199C21 /* TPPhotoViewController.m in Sources */,
+				44FCDC7517EE5C9C007548C5 /* TPMapViewController.m in Sources */,
+				44FCDC7B17EE6E95007548C5 /* TPAnnotation.m in Sources */,
+				44FCDC7E17EE706A007548C5 /* TPEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

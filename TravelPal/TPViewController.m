@@ -7,9 +7,17 @@
 //
 
 #import "TPViewController.h"
-#import "TPPhotoViewController.h"
+#import "TPMapViewController.h"
+
+#import <MapKit/MapKit.h>
+
+
+#import "TPAnnotation.h"
+#import "TPEvent.h"
 
 @interface TPViewController ()
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -38,8 +46,19 @@
 
 - (IBAction)nextView:(id)sender
 {
-    TPPhotoViewController *photoViewController = [[TPPhotoViewController alloc] initWithNibName:@"TPPhotoViewController" bundle:nil];
-    [self.navigationController pushViewController:photoViewController animated:YES];
+    TPMapViewController *mapViewController = [[TPMapViewController alloc] initWithNibName:@"TPMapViewController" bundle:nil];
+    NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:10];
+    for (int i=0; i<10; ++i) {
+        NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
+        event[EVENT_TITLE] = [NSString stringWithFormat:@"title%d", i+1];
+        event[EVENT_DESCRIPTION] = [NSString stringWithFormat:@"description%d", i+1];
+        event[EVENT_LATITUDE] = [NSNumber numberWithDouble:(37.111+i)];
+        event[EVENT_LONGITUDE] = [NSNumber numberWithDouble:(121.111+i)];
+        [annotations addObject:[TPAnnotation annotationForEvent: event]];
+    }
+
+    mapViewController.annotations = annotations;
+    [self.navigationController pushViewController:mapViewController animated:YES];
 
 }
 
