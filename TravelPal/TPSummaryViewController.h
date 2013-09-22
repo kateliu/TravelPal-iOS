@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPSummaryViewController : UIViewController
+@interface TPSummaryViewController : UIViewController {
+    IBOutlet UITableView *_tableView;
+    IBOutlet UILabel *_nameLabel;
+}
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UILabel *nameLabel;
 
 @end
