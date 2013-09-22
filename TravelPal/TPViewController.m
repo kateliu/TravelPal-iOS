@@ -74,7 +74,7 @@
         [self.navigationController pushViewController:currentTravel animated:YES];
     }
     else {
-        NSString *post = [NSString stringWithFormat:@"description=%@&user=%@", @"Trip to Arctica", @"Sean"];
+        NSString *post = [NSString stringWithFormat:@"description=%@&user=%@", @"Trip to Florida", @"Sean"];
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];

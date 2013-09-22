@@ -58,11 +58,15 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[_expenses objectAtIndex:indexPath.row] objectForKey:@"description"];
+    cell.textLabel.text = [NSString stringWithFormat:@"Expense %d: %@", indexPath.row + 1, [[_expenses objectAtIndex:indexPath.row] objectForKey:@"description"]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$ %@", [[_expenses objectAtIndex:indexPath.row] objectForKey:@"cost"]];
     return cell;
 }
 
+-(IBAction)splitMoney:(id)sender
+{
+    
+}
 
 
 @end

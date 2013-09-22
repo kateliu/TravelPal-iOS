@@ -18,4 +18,6 @@
 @property (nonatomic, strong) NSDictionary *event;
 @property (nonatomic, strong) NSMutableArray *expenses;
 
+-(IBAction)splitMoney:(id)sender;
+
 @end

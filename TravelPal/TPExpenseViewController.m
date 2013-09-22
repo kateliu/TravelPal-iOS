@@ -67,6 +67,9 @@
 
 -(IBAction)pressPayer:(id)sender
 {
+    [_costTextView resignFirstResponder];
+    [_descTextView resignFirstResponder];
+
     if (_pickerView.hidden == NO) {
         self.payerLabel.text = [_names objectAtIndex:[_pickerView selectedRowInComponent:0]];
         self.peopleLabel.text = [_names objectAtIndex:[_pickerView selectedRowInComponent:0]];
@@ -79,6 +82,9 @@
 
 -(IBAction)pressPeople:(id)sender
 {
+    [_costTextView resignFirstResponder];
+    [_descTextView resignFirstResponder];
+
     if (_pickerView.hidden == NO) {
         self.peopleLabel.text = [NSString stringWithFormat:@"%@,%@", self.peopleLabel.text, [_names objectAtIndex:[_pickerView selectedRowInComponent:0]]];
         _pickerView.hidden = YES;
