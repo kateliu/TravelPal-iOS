@@ -12,5 +12,8 @@
 
 - (IBAction)nextView:(id)sender;
 
+- (IBAction)startTravel:(id)sender;
+
+- (IBAction)recentTravel:(id)sender;
 
 @end

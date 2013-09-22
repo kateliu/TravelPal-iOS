@@ -70,7 +70,7 @@
 
 - (IBAction)sendPhoto:(UIButton *)sender
 {
-    
+
 }
 
 @end

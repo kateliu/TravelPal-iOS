@@ -8,6 +8,7 @@
 
 #import "TPViewController.h"
 #import "TPPhotoViewController.h"
+#import "TPRecentTripViewController.h"
 
 @interface TPViewController ()
 
@@ -40,7 +41,17 @@
 {
     TPPhotoViewController *photoViewController = [[TPPhotoViewController alloc] initWithNibName:@"TPPhotoViewController" bundle:nil];
     [self.navigationController pushViewController:photoViewController animated:YES];
+}
 
+- (IBAction)startTravel:(id)sender
+{
+    
+}
+
+- (IBAction)recentTravel:(id)sender
+{
+    TPRecentTripViewController *recentTripViewController = [[TPRecentTripViewController alloc] initWithNibName:@"TPRecentTripViewController" bundle:nil];
+    [self.navigationController pushViewController:recentTripViewController animated:YES];
 }
 
 @end
