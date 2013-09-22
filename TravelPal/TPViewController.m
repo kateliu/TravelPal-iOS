@@ -14,6 +14,9 @@
 
 #import "TPAnnotation.h"
 #import "TPEvent.h"
+#import "TPPhotoViewController.h"
+#import "TPCurrentTravelViewController.h"
+#import "TPRecentTripViewController.h"
 
 @interface TPViewController ()
 
@@ -44,7 +47,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)nextView:(id)sender
+- (IBAction)enterTravel:(id)sender
 {
     TPMapViewController *mapViewController = [[TPMapViewController alloc] initWithNibName:@"TPMapViewController" bundle:nil];
     NSMutableArray *annotations = [NSMutableArray arrayWithCapacity:10];
@@ -59,7 +62,14 @@
 
     mapViewController.annotations = annotations;
     [self.navigationController pushViewController:mapViewController animated:YES];
+    TPCurrentTravelViewController *currentTravel = [[TPCurrentTravelViewController alloc] initWithNibName:@"TPCurrentTravelViewController" bundle:nil];
+    [self.navigationController pushViewController:currentTravel animated:YES];
+}
 
+- (IBAction)recentTravel:(id)sender
+{
+    TPRecentTripViewController *recentTripViewController = [[TPRecentTripViewController alloc] initWithNibName:@"TPRecentTripViewController" bundle:nil];
+    [self.navigationController pushViewController:recentTripViewController animated:YES];
 }
 
 @end

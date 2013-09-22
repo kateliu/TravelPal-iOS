@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPPhotoViewController : UIViewController
+@interface TPPhotoViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSString *eventId;
+
+- (IBAction)takePhoto:(id)sender;
+
+- (IBAction)selectPhoto:(UIButton *)sender;
+
+- (IBAction)sendPhoto:(UIButton *)sender;
 
 @end

@@ -10,7 +10,8 @@
 
 @interface TPViewController : UIViewController
 
-- (IBAction)nextView:(id)sender;
+- (IBAction)enterTravel:(id)sender;
 
+- (IBAction)recentTravel:(id)sender;
 
 @end
