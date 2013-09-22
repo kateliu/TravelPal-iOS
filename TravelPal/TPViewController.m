@@ -8,6 +8,7 @@
 
 #import "TPViewController.h"
 #import "TPPhotoViewController.h"
+#import "TPCurrentTravelViewController.h"
 #import "TPRecentTripViewController.h"
 
 @interface TPViewController ()
@@ -37,15 +38,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)nextView:(id)sender
+- (IBAction)enterTravel:(id)sender
 {
-    TPPhotoViewController *photoViewController = [[TPPhotoViewController alloc] initWithNibName:@"TPPhotoViewController" bundle:nil];
-    [self.navigationController pushViewController:photoViewController animated:YES];
-}
-
-- (IBAction)startTravel:(id)sender
-{
-    
+    TPCurrentTravelViewController *currentTravel = [[TPCurrentTravelViewController alloc] initWithNibName:@"TPCurrentTravelViewController" bundle:nil];
+    [self.navigationController pushViewController:currentTravel animated:YES];
 }
 
 - (IBAction)recentTravel:(id)sender
