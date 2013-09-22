@@ -10,11 +10,11 @@
 
 @interface TPEventViewController : UIViewController {
     IBOutlet UILabel *_descLabel;
-
+    IBOutlet UITableView *_tableView;
 }
 
 @property (nonatomic, retain) UILabel *descLabel;
-
+@property (nonatomic, strong) UITableView *_tableView;
 @property (nonatomic, strong) NSDictionary *event;
 
 
