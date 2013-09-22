@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TPEventViewController : UIViewController {
-    IBOutlet UILabel *_descLabel;
     IBOutlet UITableView *_tableView;
 }
 
-@property (nonatomic, retain) UILabel *descLabel;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSDictionary *event;
 @property (nonatomic, strong) NSMutableArray *expenses;
