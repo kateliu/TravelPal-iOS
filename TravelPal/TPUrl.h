@@ -12,5 +12,7 @@
 
 +(NSString *) travelsUrl;
 +(NSString *) eventsUrl;
++(NSString *) travelEventsUrl: (NSString *)travelId;
+
 
 @end

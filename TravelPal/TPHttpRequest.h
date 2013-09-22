@@ -12,4 +12,6 @@
 
 -(void) getFromURL:(NSString *)url returningJson:(NSDictionary **)json;
 
+-(void) getFromURLArray:(NSString *)url returningJson:(NSArray **)json;
+
 @end

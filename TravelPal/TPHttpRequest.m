@@ -47,4 +47,25 @@
     [self requestForJson:json];
 }
 
+-(void) getFromURLArray:(NSString *)url returningJson:(NSArray **)json
+{
+    [self.request setURL:[NSURL URLWithString:url]];
+    [self.request setHTTPMethod:@"GET"];
+    [self.request setValue:0 forHTTPHeaderField:@"Content-Length"];
+    [self.request setHTTPBody:nil];
+    [self requestForJsonArray:json];
+}
+
+-(void) requestForJsonArray:(NSArray **)json
+{
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:self.request returningResponse:&response error:&err];
+    if (err) {
+        NSLog(@"Http connection failed (error code: %d)", err.code);
+        return;
+    }
+    *json = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+}
+
 @end

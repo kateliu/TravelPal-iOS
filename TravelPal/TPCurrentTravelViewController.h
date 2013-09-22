@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPCurrentTravelViewController : UIViewController
+@interface TPCurrentTravelViewController : UIViewController {
+    IBOutlet UITableView *_eventsTable;
+}
 
 @property (nonatomic, strong) NSString *travelId;
+
+@property (nonatomic, strong) NSArray *events;
+
+@property (nonatomic, strong) UITableView *eventsTable;
 
 @end
