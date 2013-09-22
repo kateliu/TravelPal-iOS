@@ -10,4 +10,6 @@
 
 @interface TPExpenseViewController : UIViewController
 
+@property (nonatomic, retain) NSString *eventId;
+
 @end

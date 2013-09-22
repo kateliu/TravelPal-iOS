@@ -12,18 +12,20 @@
 
 @interface TPCreateEventViewController : UIViewController {
     IBOutlet UITextField *_desc;
-    IBOutlet UITextField *_expense;
     IBOutlet UITextView *_textView;
+    
 }
 
 @property (nonatomic, strong) NSString *travelId;
+@property (nonatomic, strong) NSString *eventId;
 @property (nonatomic, strong) UITextField *desc;
-@property (nonatomic, strong) UITextField *expense;
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 -(IBAction)touchView:(id)sender;
 
--(IBAction)createEvent:(id)sender;
+-(IBAction)doneEvent:(id)sender;
+
+-(IBAction)addExpense:(id)sender;
 
 @end
