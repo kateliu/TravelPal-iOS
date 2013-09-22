@@ -21,9 +21,9 @@
 
 @implementation TPRecentTripViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibName bundle:bundle];
     if (self) {
         _httpRequest = [[TPHttpRequest alloc] init];
     }

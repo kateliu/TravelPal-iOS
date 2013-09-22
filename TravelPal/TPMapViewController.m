@@ -111,10 +111,21 @@
     [super viewDidLoad];
 
     MKCoordinateRegion mapRegion;
-    TPAnnotation *firstAnnotation = self.annotations[0];
-    mapRegion.center = firstAnnotation.coordinate;
-    mapRegion.span.latitudeDelta = 10.0;
-    mapRegion.span.longitudeDelta = 10.0;
+    CLLocationDegrees latitudeSum = 0.0;
+    CLLocationDegrees longitudeSum = 0.0;
+
+    for (TPAnnotation *annotation in self.annotations) {
+        latitudeSum += annotation.coordinate.latitude;
+        longitudeSum += annotation.coordinate.longitude;
+    }
+
+    CLLocationCoordinate2D center;
+    center.latitude = [self.annotations count] == 0 ? 0 : (latitudeSum / [self.annotations count]);
+    center.longitude = [self.annotations count] == 0 ? 0: (longitudeSum / [self.annotations count]);
+
+    mapRegion.center = center;
+    mapRegion.span.latitudeDelta = 0.5;
+    mapRegion.span.longitudeDelta = 0.5;
     [self.mapView setRegion:mapRegion animated: YES];
     
     self.mapView.delegate = self;
