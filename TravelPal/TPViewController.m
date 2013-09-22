@@ -39,7 +39,6 @@
     self.title = @"Travel Pal";
     self.userId = @"Sean"; //TODO: get developer Id programmatically.
     self.urlForTravelList = [[TPUrl usersUrl] stringByAppendingString:self.userId];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,9 +50,11 @@
     if (openTravel) {
         _currentTravelId = [openTravel objectForKey:@"id"];
         _currentTravelDesc = [openTravel objectForKey:@"description"];
-        _startButton.titleLabel.text = @"Current Travel";
+        _startButton.titleLabel.text = @"Return Travel";
     }
     else {
+        _currentTravelId = nil;
+        _currentTravelDesc = nil;
         _startButton.titleLabel.text = @"Start Travel";
     }
 }

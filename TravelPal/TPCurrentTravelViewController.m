@@ -118,7 +118,7 @@
 {
     NSError *error = nil;
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if ([jsonData objectForKey:@"expenses"]) {
+    if ([jsonData objectForKey:@"travel"]) {
         for (int i = 0; i < [_events count]; i++) {
             if ([[_events objectAtIndex:i] isEqualToString:[jsonData objectForKey:@"id"]]) {
                 UITableViewCell *cell = [_eventsTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
