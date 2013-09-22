@@ -65,7 +65,7 @@
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
 
     TPCurrentTravelViewController *currentTravel = [[TPCurrentTravelViewController alloc] initWithNibName:@"TPCurrentTravelViewController" bundle:nil];
-    currentTravel.travelId = [jsonData objectForKey:@"travelID"];
+    currentTravel.travelId = @"-J43IXGIwYSJHT-XV79G";
     [self.navigationController pushViewController:currentTravel animated:YES];
 }
 

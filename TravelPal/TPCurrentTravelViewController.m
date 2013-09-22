@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"My Travel";
     NSString *eventsUrl = [TPUrl travelEventsUrl:_travelId];
     NSLog(@"%@", eventsUrl);
     TPHttpRequest *request = [[TPHttpRequest alloc] init];

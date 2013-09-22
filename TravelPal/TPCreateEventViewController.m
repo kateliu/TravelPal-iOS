@@ -8,6 +8,8 @@
 
 #import "TPCreateEventViewController.h"
 #import "TPUrl.h"
+#import <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CLLocationManager.h>
 
 @interface TPCreateEventViewController ()
 
@@ -29,6 +31,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = kCLDistanceFilterNone;
+    [_locationManager startUpdatingLocation];
+    [_locationManager stopUpdatingLocation];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +53,11 @@
 
 -(IBAction)createEvent:(id)sender
 {
-    NSString *post = [NSString stringWithFormat:@"description=%@&payer=%@&people=%@&expense=%@", _desc.text, @"Sean", _textView.text, _expense.text];
+    CLLocation *location = [_locationManager location];    
+    float longitude = location.coordinate.longitude;
+    float latitude = location.coordinate.latitude;
+    
+    NSString *post = [NSString stringWithFormat:@"description=%@&payer=%@&people=%@&expense=%@&longitude=%f&latitude=%f", _desc.text, @"Sean", _textView.text, _expense.text, longitude, latitude];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];

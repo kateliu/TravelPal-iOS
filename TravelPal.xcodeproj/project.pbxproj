@@ -17,6 +17,7 @@
 		00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */; };
 		008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008D352217EEA8000062397F /* TPCreateEventViewController.m */; };
 		008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008D352317EEA8000062397F /* TPCreateEventViewController.xib */; };
+		008D352717EEBC010062397F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D352617EEBC000062397F /* CoreLocation.framework */; };
 		44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3617EE51AA007548C5 /* CoreGraphics.framework */; };
@@ -66,6 +67,7 @@
 		008D352117EEA8000062397F /* TPCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCreateEventViewController.h; sourceTree = "<group>"; };
 		008D352217EEA8000062397F /* TPCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCreateEventViewController.m; sourceTree = "<group>"; };
 		008D352317EEA8000062397F /* TPCreateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCreateEventViewController.xib; sourceTree = "<group>"; };
+		008D352617EEBC000062397F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		44FCDC2F17EE51AA007548C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC3217EE51AA007548C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44FCDC3417EE51AA007548C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008D352717EEBC010062397F /* CoreLocation.framework in Frameworks */,
 				44FCDC7817EE6B83007548C5 /* MapKit.framework in Frameworks */,
 				44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */,
 				44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		44FCDC2617EE51AA007548C5 = {
 			isa = PBXGroup;
 			children = (
+				008D352617EEBC000062397F /* CoreLocation.framework */,
 				44FCDC7717EE6B83007548C5 /* MapKit.framework */,
 				44FCDC3817EE51AA007548C5 /* TravelPal */,
 				44FCDC5C17EE51AA007548C5 /* TravelPalTests */,
