@@ -58,9 +58,6 @@
         _startButton.titleLabel.text = @"Start Travel";
     }
     self.urlForTravelList = [[TPUrl usersUrl] stringByAppendingString:self.userId];
-    UIImage *bgImage = [UIImage imageNamed:@"LauchViewBackground.png"];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:bgImage];
-
 }
 
 - (void)didReceiveMemoryWarning
