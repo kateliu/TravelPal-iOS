@@ -34,6 +34,8 @@
 		44FCDC7817EE6B83007548C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC7717EE6B83007548C5 /* MapKit.framework */; };
 		44FCDC7B17EE6E95007548C5 /* TPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */; };
 		44FCDC7E17EE706A007548C5 /* TPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC7D17EE706A007548C5 /* TPEvent.m */; };
+		44FCDC8417EE94F6007548C5 /* TPHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC8317EE94F6007548C5 /* TPHttpRequest.m */; };
+		44FCDC8717EE9509007548C5 /* TPUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 44FCDC8617EE9509007548C5 /* TPUrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAnnotation.m; sourceTree = "<group>"; };
 		44FCDC7C17EE706A007548C5 /* TPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPEvent.h; sourceTree = "<group>"; };
 		44FCDC7D17EE706A007548C5 /* TPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPEvent.m; sourceTree = "<group>"; };
+		44FCDC8217EE94F6007548C5 /* TPHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHttpRequest.h; sourceTree = "<group>"; };
+		44FCDC8317EE94F6007548C5 /* TPHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHttpRequest.m; sourceTree = "<group>"; };
+		44FCDC8517EE9509007548C5 /* TPUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUrl.h; sourceTree = "<group>"; };
+		44FCDC8617EE9509007548C5 /* TPUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPUrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,10 @@
 				44FCDC7A17EE6E95007548C5 /* TPAnnotation.m */,
 				44FCDC7C17EE706A007548C5 /* TPEvent.h */,
 				44FCDC7D17EE706A007548C5 /* TPEvent.m */,
+				44FCDC8217EE94F6007548C5 /* TPHttpRequest.h */,
+				44FCDC8317EE94F6007548C5 /* TPHttpRequest.m */,
+				44FCDC8517EE9509007548C5 /* TPUrl.h */,
+				44FCDC8617EE9509007548C5 /* TPUrl.m */,
 			);
 			path = TravelPal;
 			sourceTree = "<group>";
@@ -330,6 +340,8 @@
 				44FCDC7E17EE706A007548C5 /* TPEvent.m in Sources */,
 				00479F6717EE6AAF00199C21 /* TPRecentTripViewController.m in Sources */,
 				00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */,
+				44FCDC8417EE94F6007548C5 /* TPHttpRequest.m in Sources */,
+				44FCDC8717EE9509007548C5 /* TPUrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
