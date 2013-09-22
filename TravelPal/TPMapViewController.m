@@ -8,6 +8,7 @@
 
 #import "TPMapViewController.h"
 
+#import "TPAnnotation.h"
 #import "TPHttpRequest.h"
 #import "TPUrl.h"
 
@@ -58,7 +59,6 @@
         aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapVC"];
         aView.canShowCallout = YES;
     }
-
     aView.annotation = annotation;
     return aView;
 }
@@ -108,14 +108,13 @@
 {
     [super viewDidLoad];
 
-//    MKCoordinateRegion mapRegion;
-//    CLLocationCoordinate2D coordinate;
-//    coordinate.latitude = 37.111;
-//    coordinate.longitude = 121.111;
-//    mapRegion.center = coordinate;
-//    mapRegion.span.latitudeDelta = 10.0;
-//    mapRegion.span.longitudeDelta = 10.0;
-//    [self.mapView setRegion:mapRegion animated: YES];
+    MKCoordinateRegion mapRegion;
+    TPAnnotation *firstAnnotation = self.annotations[0];
+    mapRegion.center = firstAnnotation.coordinate;
+    mapRegion.span.latitudeDelta = 10.0;
+    mapRegion.span.longitudeDelta = 10.0;
+    [self.mapView setRegion:mapRegion animated: YES];
+    
     self.mapView.delegate = self;
 }
 
