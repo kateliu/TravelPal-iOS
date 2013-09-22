@@ -44,8 +44,8 @@
                         <action selector="addExpense:" destination="-1" eventType="touchUpInside" id="klh-zK-qMO"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add description" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-6R-cmE">
-                    <rect key="frame" x="37" y="139" width="190" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put Some Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-6R-cmE">
+                    <rect key="frame" x="41" y="139" width="190" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
