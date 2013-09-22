@@ -10,4 +10,6 @@
 
 @interface TPCurrentTravelViewController : UIViewController
 
+@property (nonatomic, strong) NSString *travelId;
+
 @end
