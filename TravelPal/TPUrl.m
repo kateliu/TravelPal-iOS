@@ -30,6 +30,11 @@ static NSString *usersPath = @"/users/";
     return [travelPalUrl stringByAppendingString: usersPath];
 }
 
++(NSString *) travelInfoUrl: (NSString *)travelId
+{
+    return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/travels/%@", travelId]];
+}
+
 +(NSString *) travelEventsUrl: (NSString *)travelId
 {
     return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/travels/%@/events", travelId]];
@@ -63,6 +68,11 @@ static NSString *usersPath = @"/users/";
 +(NSString *) addExpenseUrl: (NSString *)eventId
 {
     return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/events/%@/expenses", eventId]];
+}
+
++(NSString *) travelSummaryUrl: (NSString *)travelId
+{
+    return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/travels/%@/summary", travelId]];
 }
 
 @end

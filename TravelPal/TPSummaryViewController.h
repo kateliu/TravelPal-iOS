@@ -11,9 +11,12 @@
 @interface TPSummaryViewController : UIViewController {
     IBOutlet UITableView *_tableView;
     IBOutlet UILabel *_nameLabel;
+    IBOutlet UITableView *_paymentTable;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UITableView *paymentTable;
+@property (nonatomic, strong) NSString *travelId;
+
 
 @end

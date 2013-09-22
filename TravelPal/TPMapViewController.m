@@ -152,6 +152,7 @@
 - (IBAction)toSummary:(id)sender
 {
     TPSummaryViewController* controller = [[TPSummaryViewController alloc] initWithNibName:@"TPSummaryViewController" bundle:nil];
+    controller.travelId = self.travelId;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
