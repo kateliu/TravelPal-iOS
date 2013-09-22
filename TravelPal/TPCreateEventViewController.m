@@ -11,6 +11,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreLocation/CLLocationManager.h>
 #import "TPExpenseViewController.h"
+#import "TPEventViewController.h"
+#import "TPHttpRequest.h"
 
 @interface TPCreateEventViewController ()
 
@@ -101,7 +103,11 @@
     }
     else {
         UINavigationController *navController = self.navigationController;
-        [navController popViewControllerAnimated:YES];
+        [navController popViewControllerAnimated:NO];
+        TPEventViewController *controller = [[TPEventViewController alloc] initWithNibName:@"TPEventViewController" bundle:nil];
+        TPHttpRequest *request = [[TPHttpRequest alloc] init];
+        controller.event = [request getJsonFromUrl:[TPUrl getEventUrl:self.eventId]];
+        [navController pushViewController:controller animated:YES];
     }
 }
 
@@ -110,6 +116,7 @@
     if (self.eventId) {
         TPExpenseViewController *controller = [[TPExpenseViewController alloc] initWithNibName:@"TPExpenseViewController" bundle:nil];
         controller.eventId = self.eventId;
+        
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
