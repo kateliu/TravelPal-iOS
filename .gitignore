@@ -3,4 +3,6 @@
 xcuserdata
 project.xcworkspace/xcshareddata/
 contents.xcworkspacedata
-
+.sconsign.dblite
+TravelPal.approj/.sconsign.dblite
+TravelPal.xcodeproj/project.xcworkspace/xcshareddata/
