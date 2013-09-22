@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class  CLLocationManager;
+
 @interface TPCreateEventViewController : UIViewController {
     IBOutlet UITextField *_desc;
     IBOutlet UITextField *_expense;
@@ -18,6 +20,7 @@
 @property (nonatomic, strong) UITextField *desc;
 @property (nonatomic, strong) UITextField *expense;
 @property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 -(IBAction)touchView:(id)sender;
 

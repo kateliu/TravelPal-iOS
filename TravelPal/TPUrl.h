@@ -16,5 +16,8 @@
 +(NSString *) travelEventsUrl: (NSString *)travelId;
 +(NSString *) endTravelUrl: (NSString *)travelId;
 +(NSString *) createEventUrl: (NSString *)travelId;
++(NSString *) getEventUrl: (NSString *)eventId;
++(NSString *) getOpenTravel: (NSString *)userId;
+
 
 @end

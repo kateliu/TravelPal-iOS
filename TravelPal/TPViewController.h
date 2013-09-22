@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPViewController : UIViewController
+@interface TPViewController : UIViewController {
+    IBOutlet UIButton *_startButton;
+}
+
+@property (nonatomic, strong) UIButton *startButton;
+@property (nonatomic, strong) NSString *currentTravelId;
 
 - (IBAction)enterTravel:(id)sender;
 
 - (IBAction)recentTravel:(id)sender;
+
+
 
 @end
