@@ -15,7 +15,6 @@
 		00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6617EE6AAF00199C21 /* TPRecentTripViewController.xib */; };
 		00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */; };
 		00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */; };
-		0064154F17EEF58F006A7096 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0064154E17EEF58F006A7096 /* background.png */; };
 		0064155317EEF7D1006A7096 /* TPExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064155117EEF7D1006A7096 /* TPExpenseViewController.m */; };
 		0064155417EEF7D1006A7096 /* TPExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */; };
 		008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008D352217EEA8000062397F /* TPCreateEventViewController.m */; };
@@ -23,6 +22,7 @@
 		008D352717EEBC010062397F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D352617EEBC000062397F /* CoreLocation.framework */; };
 		008D352B17EED3370062397F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352A17EED3370062397F /* Default@2x.png */; };
 		008D352D17EED3AF0062397F /* ios7_icon2_white_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */; };
+		4461DA5317EEED80001229CF /* LauchViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4461DA5217EEED80001229CF /* LauchViewBackground.png */; };
 		44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3617EE51AA007548C5 /* CoreGraphics.framework */; };
@@ -69,7 +69,6 @@
 		00479F6917EE78D600199C21 /* TPCurrentTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrentTravelViewController.h; sourceTree = "<group>"; };
 		00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrentTravelViewController.m; sourceTree = "<group>"; };
 		00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCurrentTravelViewController.xib; sourceTree = "<group>"; };
-		0064154E17EEF58F006A7096 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0064155017EEF7D1006A7096 /* TPExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPExpenseViewController.h; sourceTree = "<group>"; };
 		0064155117EEF7D1006A7096 /* TPExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPExpenseViewController.m; sourceTree = "<group>"; };
 		0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPExpenseViewController.xib; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		008D352617EEBC000062397F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		008D352A17EED3370062397F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios7_icon2_white_web.png; sourceTree = "<group>"; };
+		4461DA5217EEED80001229CF /* LauchViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LauchViewBackground.png; sourceTree = "<group>"; };
 		44FCDC2F17EE51AA007548C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC3217EE51AA007548C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44FCDC3417EE51AA007548C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,7 +141,6 @@
 		44FCDC2617EE51AA007548C5 = {
 			isa = PBXGroup;
 			children = (
-				0064154E17EEF58F006A7096 /* background.png */,
 				008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */,
 				008D352A17EED3370062397F /* Default@2x.png */,
 				008D352617EEBC000062397F /* CoreLocation.framework */,
@@ -215,6 +214,7 @@
 		44FCDC3917EE51AA007548C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4461DA5217EEED80001229CF /* LauchViewBackground.png */,
 				44FCDC3A17EE51AA007548C5 /* TravelPal-Info.plist */,
 				44FCDC3B17EE51AA007548C5 /* InfoPlist.strings */,
 				44FCDC3E17EE51AA007548C5 /* main.m */,
@@ -325,11 +325,11 @@
 				00479F5E17EE577E00199C21 /* TPPhotoViewController.xib in Resources */,
 				44FCDC7617EE5C9C007548C5 /* TPMapViewController.xib in Resources */,
 				00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */,
+				4461DA5317EEED80001229CF /* LauchViewBackground.png in Resources */,
 				00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */,
 				008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */,
 				008D352B17EED3370062397F /* Default@2x.png in Resources */,
 				008D352D17EED3AF0062397F /* ios7_icon2_white_web.png in Resources */,
-				0064154F17EEF58F006A7096 /* background.png in Resources */,
 				0064155417EEF7D1006A7096 /* TPExpenseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelPal/TravelPal-Prefix.pch";
 				INFOPLIST_FILE = "TravelPalTests/TravelPalTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -525,6 +526,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravelPal/TravelPal-Prefix.pch";
 				INFOPLIST_FILE = "TravelPalTests/TravelPalTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

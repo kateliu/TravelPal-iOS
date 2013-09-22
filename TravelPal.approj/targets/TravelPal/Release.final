@@ -1,0 +1,302 @@
+{
+    "xcode_project": "TravelPal.xcodeproj", 
+    "java_sources": [], 
+    "pchs": [
+        "./TravelPal/TravelPal-Prefix.pch"
+    ], 
+    "assets": [
+        {
+            "asset": "TravelPal/en.lproj/InfoPlist.strings", 
+            "target": "en.lproj/InfoPlist.strings"
+        }, 
+        {
+            "asset": "TravelPal/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "TravelPal/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "TravelPal/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "TravelPal/TPViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "TravelPal/TPPhotoViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "TravelPal/TPMapViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "TravelPal/TPRecentTripViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "TravelPal/TPCurrentTravelViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "TravelPal/TPCreateEventViewController.xib", 
+            "target": null
+        }, 
+        {
+            "asset": "ios7_icon2_white_web.png", 
+            "target": "ios7_icon2_white_web.png"
+        }
+    ], 
+    "link_flags": [], 
+    "config": {
+        "FEATURES": [
+            "opengles2", 
+            "portrait"
+        ], 
+        "SHORT_VERSION": "1.0", 
+        "APPLICATION_NAME": "TravelPal", 
+        "LONG_VERSION": "1.0", 
+        "APPLICATION_IDENTIFIER": "com.ok.TravelPal", 
+        "TEMPLATE_VALUES": {
+            "PRODUCT_NAME": "TravelPal", 
+            "EXECUTABLE_NAME": "TravelPal"
+        }, 
+        "APPLICATION_FULL_NAME": "TravelPal"
+    }, 
+    "header_paths": [
+        {
+            "header_path": "TravelPal-generated-files.hmap", 
+            "type": "iquote", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "TravelPal-own-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "TravelPal-all-target-headers.hmap", 
+            "type": "I", 
+            "hmap": {}
+        }, 
+        {
+            "header_path": "TravelPal-project-headers.hmap", 
+            "type": "iquote", 
+            "hmap": {
+                "TPUrl.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPUrl.h", 
+                    "key": "TPUrl.h"
+                }, 
+                "TravelPalTests.h": {
+                    "prefix": "TravelPalTests/", 
+                    "suffix": "TravelPalTests.h", 
+                    "key": "TravelPalTests.h"
+                }, 
+                "TravelPal-Prefix.pch": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TravelPal-Prefix.pch", 
+                    "key": "TravelPal-Prefix.pch"
+                }, 
+                "TPCurrentTravelViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPCurrentTravelViewController.h", 
+                    "key": "TPCurrentTravelViewController.h"
+                }, 
+                "TPMapViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPMapViewController.h", 
+                    "key": "TPMapViewController.h"
+                }, 
+                "TPViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPViewController.h", 
+                    "key": "TPViewController.h"
+                }, 
+                "TPHttpRequest.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPHttpRequest.h", 
+                    "key": "TPHttpRequest.h"
+                }, 
+                "TPPhotoViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPPhotoViewController.h", 
+                    "key": "TPPhotoViewController.h"
+                }, 
+                "TPEvent.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPEvent.h", 
+                    "key": "TPEvent.h"
+                }, 
+                "TPAnnotation.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPAnnotation.h", 
+                    "key": "TPAnnotation.h"
+                }, 
+                "TPCreateEventViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPCreateEventViewController.h", 
+                    "key": "TPCreateEventViewController.h"
+                }, 
+                "TPAppDelegate.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPAppDelegate.h", 
+                    "key": "TPAppDelegate.h"
+                }, 
+                "TPRecentTripViewController.h": {
+                    "prefix": "TravelPal/", 
+                    "suffix": "TPRecentTripViewController.h", 
+                    "key": "TPRecentTripViewController.h"
+                }
+            }
+        }
+    ], 
+    "modules": [], 
+    "sources": [
+        {
+            "source": "TravelPal/TPAnnotation.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPAppDelegate.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPCreateEventViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPCurrentTravelViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPEvent.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPHttpRequest.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPMapViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPPhotoViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPRecentTripViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPUrl.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/TPViewController.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }, 
+        {
+            "source": "TravelPal/main.m", 
+            "header_paths": [], 
+            "flags": [], 
+            "language": "objc", 
+            "defines": {}
+        }
+    ], 
+    "version": "1", 
+    "flags": [
+        "-DNS_BLOCK_ASSERTIONS=1", 
+        "-fwritable-strings", 
+        "-fobjc-arc", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }
+    ], 
+    "infoplists": [
+        "./TravelPal/TravelPal-Info.plist"
+    ], 
+    "deps": [
+        "UIKit", 
+        "CoreLocation", 
+        "MapKit", 
+        "UIKit", 
+        "Foundation", 
+        "CoreGraphics"
+    ], 
+    "libs": [], 
+    "java_sourcepaths": [], 
+    "java_res_dirs": [], 
+    "type": "app", 
+    "java_libs": [], 
+    "defines": {
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 60100, 
+        "NS_BLOCK_ASSERTIONS": 1
+    }
+}

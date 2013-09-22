@@ -9,6 +9,10 @@
 #import "TPAppDelegate.h"
 #import "TPViewController.h"
 
+#ifdef APPORTABLE
+#import <UIKit/UIScreenMode.h>
+#endif
+
 @implementation TPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,6 +29,10 @@
     self.window.rootViewController = navigationController;
 
     [self.window makeKeyAndVisible];
+
+#ifdef APPORTABLE
+    [UIScreen mainScreen].currentMode = [UIScreenMode emulatedMode:UIScreenAspectFitEmulationMode];
+#endif
 
     return YES;
 }

@@ -56,8 +56,10 @@
 {
     MKAnnotationView *aView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MapVC"];
     if (!aView) {
+#ifndef APPORTABLE
         aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapVC"];
         aView.canShowCallout = YES;
+#endif
     }
     aView.annotation = annotation;
     return aView;
