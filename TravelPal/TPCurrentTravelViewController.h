@@ -18,4 +18,8 @@
 
 @property (nonatomic, strong) UITableView *eventsTable;
 
+- (IBAction)endTravel:(id)sender;
+
+- (IBAction)createEvent:(id)sender;
+
 @end

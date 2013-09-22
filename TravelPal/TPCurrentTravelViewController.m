@@ -9,6 +9,7 @@
 #import "TPCurrentTravelViewController.h"
 #import "TPUrl.h"
 #import "TPHttpRequest.h"
+#import "TPCreateEventViewController.h"
 
 @interface TPCurrentTravelViewController ()
 
@@ -66,5 +67,40 @@
     
     return cell;
 }
+
+- (IBAction)createEvent:(id)sender
+{
+    TPCreateEventViewController *createEventController = [[TPCreateEventViewController alloc] initWithNibName:@"TPCreateEventViewController" bundle:nil];
+    createEventController.travelId = self.travelId;
+    [self.navigationController pushViewController:createEventController animated:YES];
+
+}
+
+- (IBAction)endTravel:(id)sender
+{
+    NSString *post = @"";
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[TPUrl endTravelUrl:_travelId]]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    if (conn) {
+        NSLog(@"Connection Successful");
+    }
+    else {
+        NSLog(@"Connection could not be made");
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
+{
+    UINavigationController *navController = self.navigationController;
+    [navController popViewControllerAnimated:YES];
+}
+
 
 @end

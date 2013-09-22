@@ -29,4 +29,15 @@ static NSString *eventsPath = @"/events/";
     return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/events/%@", travelId]];
 }
 
++(NSString *) endTravelUrl: (NSString *)travelId
+{
+    return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/travels/%@/end", travelId]];
+}
+
++(NSString *) createEventUrl: (NSString *)travelId
+{
+    return [travelPalUrl stringByAppendingString: [NSString stringWithFormat:@"/travels/%@/events", travelId]];
+}
+
+
 @end

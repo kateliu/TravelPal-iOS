@@ -15,6 +15,8 @@
 		00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6617EE6AAF00199C21 /* TPRecentTripViewController.xib */; };
 		00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */; };
 		00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */; };
+		008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008D352217EEA8000062397F /* TPCreateEventViewController.m */; };
+		008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008D352317EEA8000062397F /* TPCreateEventViewController.xib */; };
 		44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3617EE51AA007548C5 /* CoreGraphics.framework */; };
@@ -61,6 +63,9 @@
 		00479F6917EE78D600199C21 /* TPCurrentTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrentTravelViewController.h; sourceTree = "<group>"; };
 		00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrentTravelViewController.m; sourceTree = "<group>"; };
 		00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCurrentTravelViewController.xib; sourceTree = "<group>"; };
+		008D352117EEA8000062397F /* TPCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCreateEventViewController.h; sourceTree = "<group>"; };
+		008D352217EEA8000062397F /* TPCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCreateEventViewController.m; sourceTree = "<group>"; };
+		008D352317EEA8000062397F /* TPCreateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCreateEventViewController.xib; sourceTree = "<group>"; };
 		44FCDC2F17EE51AA007548C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC3217EE51AA007548C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44FCDC3417EE51AA007548C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +184,9 @@
 				44FCDC8317EE94F6007548C5 /* TPHttpRequest.m */,
 				44FCDC8517EE9509007548C5 /* TPUrl.h */,
 				44FCDC8617EE9509007548C5 /* TPUrl.m */,
+				008D352117EEA8000062397F /* TPCreateEventViewController.h */,
+				008D352217EEA8000062397F /* TPCreateEventViewController.m */,
+				008D352317EEA8000062397F /* TPCreateEventViewController.xib */,
 			);
 			path = TravelPal;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 				44FCDC7617EE5C9C007548C5 /* TPMapViewController.xib in Resources */,
 				00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */,
 				00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */,
+				008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +351,7 @@
 				00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */,
 				44FCDC8417EE94F6007548C5 /* TPHttpRequest.m in Sources */,
 				44FCDC8717EE9509007548C5 /* TPUrl.m in Sources */,
+				008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
