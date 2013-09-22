@@ -127,7 +127,7 @@
             if ([[_events objectAtIndex:i] isEqualToString:[jsonData objectForKey:@"id"]]) {
                 UITableViewCell *cell = [_eventsTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
                 cell.textLabel.text = [jsonData objectForKey:@"description"];
-                cell.detailTextLabel.text = [NSString stringWithFormat:@"$%d", arc4random() % 100];
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"$%d", (arc4random()%100)+10];
                 break;
             }
         }
@@ -147,7 +147,9 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Events in this trip";
+}
 
 @end
