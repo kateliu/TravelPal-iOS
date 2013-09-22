@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UITextField *desc;
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 -(IBAction)touchView:(id)sender;
 
