@@ -13,6 +13,7 @@
 static NSString *travelPalUrl = @"http://travelpal.herokuapp.com";
 static NSString *travelsPath = @"/travels/";
 static NSString *eventsPath = @"/events/";
+static NSString *usersPath = @"/users/";
 
 +(NSString *) travelsUrl
 {
@@ -22,6 +23,11 @@ static NSString *eventsPath = @"/events/";
 +(NSString *) eventsUrl
 {
     return [travelPalUrl stringByAppendingString: eventsPath];
+}
+
++(NSString *) usersUrl
+{
+    return [travelPalUrl stringByAppendingString: usersPath];
 }
 
 +(NSString *) travelEventsUrl: (NSString *)travelId

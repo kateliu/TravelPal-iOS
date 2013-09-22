@@ -10,6 +10,8 @@
 
 @interface TPPhotoViewController ()
 
+@property (nonatomic, strong) NSString *urlForTravelList;
+
 @end
 
 @implementation TPPhotoViewController

@@ -8,7 +8,12 @@
 
 #import "TPRecentTripViewController.h"
 
+#import "TPHttpRequest.h"
+#import "TPMapViewController.h"
+
 @interface TPRecentTripViewController ()
+
+@property (nonatomic, strong) TPHttpRequest *httpRequest;
 
 @end
 
@@ -18,7 +23,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        _httpRequest = [[TPHttpRequest alloc] init];
     }
     return self;
 }
@@ -26,13 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    _tripData = @[@{@"Name": @"Sean's trip"}, @{@"Name": @"Clyde's trip"}, @{@"Name": @"Dan's Trip"}];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_tripData count];
+    return [_travelList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,7 +58,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    cell.textLabel.text = [[_tripData objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    cell.textLabel.text = [[_travelList objectAtIndex:indexPath.row] objectForKey:@"description"];
     
     return cell;
 }
@@ -108,13 +106,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    TPMapViewController *mapViewController = [[TPMapViewController alloc] initWithNibName:@"TPMapViewController" bundle:nil];
+    int rowId = [indexPath row];
+    mapViewController.travelId = [self.travelList[rowId] objectForKey:@"id"];
+    [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
 @end
