@@ -13,7 +13,6 @@
 @interface TPCreateEventViewController : UIViewController {
     IBOutlet UITextField *_desc;
     IBOutlet UITextView *_textView;
-    
 }
 
 @property (nonatomic, strong) NSString *travelId;

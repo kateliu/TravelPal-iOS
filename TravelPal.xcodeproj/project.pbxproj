@@ -22,6 +22,8 @@
 		008D352717EEBC010062397F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D352617EEBC000062397F /* CoreLocation.framework */; };
 		008D352B17EED3370062397F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352A17EED3370062397F /* Default@2x.png */; };
 		008D352D17EED3AF0062397F /* ios7_icon2_white_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */; };
+		009AF13717EF1C5000836E0B /* TPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009AF13517EF1C5000836E0B /* TPEventViewController.m */; };
+		009AF13817EF1C5000836E0B /* TPEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009AF13617EF1C5000836E0B /* TPEventViewController.xib */; };
 		4461DA5317EEED80001229CF /* LauchViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4461DA5217EEED80001229CF /* LauchViewBackground.png */; };
 		446BF1C517EF1C2E009DD47A /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 446BF1C417EF1C2E009DD47A /* Messages.png */; };
 		446BF1C717EF23B0009DD47A /* DoneCircle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 446BF1C617EF23B0009DD47A /* DoneCircle.jpg */; };
@@ -80,6 +82,9 @@
 		008D352617EEBC000062397F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		008D352A17EED3370062397F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios7_icon2_white_web.png; sourceTree = "<group>"; };
+		009AF13417EF1C5000836E0B /* TPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPEventViewController.h; sourceTree = "<group>"; };
+		009AF13517EF1C5000836E0B /* TPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPEventViewController.m; sourceTree = "<group>"; };
+		009AF13617EF1C5000836E0B /* TPEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPEventViewController.xib; sourceTree = "<group>"; };
 		4461DA5217EEED80001229CF /* LauchViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LauchViewBackground.png; sourceTree = "<group>"; };
 		446BF1C417EF1C2E009DD47A /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
 		446BF1C617EF23B0009DD47A /* DoneCircle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DoneCircle.jpg; sourceTree = "<group>"; };
@@ -211,6 +216,9 @@
 				0064155017EEF7D1006A7096 /* TPExpenseViewController.h */,
 				0064155117EEF7D1006A7096 /* TPExpenseViewController.m */,
 				0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */,
+				009AF13417EF1C5000836E0B /* TPEventViewController.h */,
+				009AF13517EF1C5000836E0B /* TPEventViewController.m */,
+				009AF13617EF1C5000836E0B /* TPEventViewController.xib */,
 			);
 			path = TravelPal;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FCDC3D17EE51AA007548C5 /* InfoPlist.strings in Resources */,
+				009AF13817EF1C5000836E0B /* TPEventViewController.xib in Resources */,
 				44FCDC4517EE51AA007548C5 /* Default.png in Resources */,
 				44FCDC4717EE51AA007548C5 /* Default@2x.png in Resources */,
 				44FCDC4917EE51AA007548C5 /* Default-568h@2x.png in Resources */,
@@ -384,6 +393,7 @@
 				00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */,
 				44FCDC8417EE94F6007548C5 /* TPHttpRequest.m in Sources */,
 				44FCDC8717EE9509007548C5 /* TPUrl.m in Sources */,
+				009AF13717EF1C5000836E0B /* TPEventViewController.m in Sources */,
 				008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */,
 				0064155317EEF7D1006A7096 /* TPExpenseViewController.m in Sources */,
 			);
