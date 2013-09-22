@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Event Detail";
     _expenses = [[NSMutableArray alloc] init];
     _descLabel.text = [_event objectForKey:@"description"];
     for (NSString *key in [[_event objectForKey:@"expenses"] allKeys]) {
@@ -55,9 +56,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     cell.textLabel.text = [[_expenses objectAtIndex:indexPath.row] objectForKey:@"description"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$ %@", [[_expenses objectAtIndex:indexPath.row] objectForKey:@"cost"]];
     return cell;
 }
 
