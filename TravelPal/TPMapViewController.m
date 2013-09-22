@@ -8,6 +8,7 @@
 
 #import "TPMapViewController.h"
 
+#import "TPSummaryViewController.h"
 #import "TPAnnotation.h"
 #import "TPHttpRequest.h"
 #import "TPUrl.h"
@@ -147,5 +148,12 @@
 {
     return YES;
 }
+
+- (IBAction)toSummary:(id)sender
+{
+    TPSummaryViewController* controller = [[TPSummaryViewController alloc] initWithNibName:@"TPSummaryViewController" bundle:nil];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 
 @end

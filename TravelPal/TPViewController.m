@@ -50,7 +50,7 @@
     if (openTravel) {
         _currentTravelId = [openTravel objectForKey:@"id"];
         _currentTravelDesc = [openTravel objectForKey:@"description"];
-        _startButton.titleLabel.text = @"Return Travel";
+        [_startButton setTitle:@"Return Travel" forState:UIControlStateNormal];
     }
     else {
         _currentTravelId = nil;

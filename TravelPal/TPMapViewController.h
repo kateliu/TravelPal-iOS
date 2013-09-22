@@ -16,4 +16,7 @@
 @property (nonatomic, strong) NSString *travelId;
 @property (nonatomic, strong) NSArray *eventIds;
 @property (nonatomic, strong) NSArray *annotations;
+
+- (IBAction)toSummary:(id)sender;
+
 @end
