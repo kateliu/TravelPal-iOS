@@ -30,12 +30,17 @@
 {
     [super viewDidLoad];
     self.title = @"My Travel";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     NSString *eventsUrl = [TPUrl travelEventsUrl:_travelId];
     TPHttpRequest *request = [[TPHttpRequest alloc] init];
     _events = [request getJsonFromUrl: eventsUrl];
     [_eventsTable reloadData];
     [self loadEvents];
 }
+
 
 - (void)loadEvents
 {
@@ -113,7 +118,7 @@
 {
     NSError *error = nil;
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if ([jsonData objectForKey:@"expenses"]) {
+    if ([jsonData objectForKey:@"travel"]) {
         for (int i = 0; i < [_events count]; i++) {
             if ([[_events objectAtIndex:i] isEqualToString:[jsonData objectForKey:@"id"]]) {
                 UITableViewCell *cell = [_eventsTable cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];

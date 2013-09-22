@@ -38,16 +38,24 @@
     [super viewDidLoad];
     self.title = @"Travel Pal";
     self.userId = @"Sean"; //TODO: get developer Id programmatically.
+    self.urlForTravelList = [[TPUrl usersUrl] stringByAppendingString:self.userId];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     NSString *eventsUrl = [TPUrl getOpenTravel:self.userId];
     TPHttpRequest *request = [[TPHttpRequest alloc] init];
-    NSLog(@"%@", eventsUrl);
-    NSDictionary* openEvent = [request getJsonFromUrl: eventsUrl];
-    if (openEvent) {
-        _currentTravelId = [openEvent objectForKey:@"id"];
-        _startButton.titleLabel.text = @"Current Travel";
+    NSDictionary* openTravel = [request getJsonFromUrl: eventsUrl];
+    if (openTravel) {
+        _currentTravelId = [openTravel objectForKey:@"id"];
+        _currentTravelDesc = [openTravel objectForKey:@"description"];
+        _startButton.titleLabel.text = @"Return Travel";
     }
     else {
-        _startButton.titleLabel.text = @"Start Travel";        
+        _currentTravelId = nil;
+        _currentTravelDesc = nil;
+        _startButton.titleLabel.text = @"Start Travel";
     }
     self.urlForTravelList = [[TPUrl usersUrl] stringByAppendingString:self.userId];
 }
@@ -62,7 +70,7 @@
 {
     if (_currentTravelId) {
         TPCurrentTravelViewController *currentTravel = [[TPCurrentTravelViewController alloc] initWithNibName:@"TPCurrentTravelViewController" bundle:nil];
-        currentTravel.travelId = @"-J42oLypRGPmwgwal4-P";
+        currentTravel.travelId = _currentTravelId;
         [self.navigationController pushViewController:currentTravel animated:YES];
     }
     else {
@@ -91,7 +99,7 @@
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
 
     TPCurrentTravelViewController *currentTravel = [[TPCurrentTravelViewController alloc] initWithNibName:@"TPCurrentTravelViewController" bundle:nil];
-    currentTravel.travelId = [jsonData objectForKey:@"id"];
+    currentTravel.travelId = [jsonData objectForKey:@"travelID"];
     [self.navigationController pushViewController:currentTravel animated:YES];
 }
 

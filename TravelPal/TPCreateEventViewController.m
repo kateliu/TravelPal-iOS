@@ -10,6 +10,7 @@
 #import "TPUrl.h"
 #import <CoreLocation/CoreLocation.h>
 #import <CoreLocation/CLLocationManager.h>
+#import "TPExpenseViewController.h"
 
 @interface TPCreateEventViewController ()
 
@@ -37,6 +38,26 @@
     [_locationManager startUpdatingLocation];
     [_locationManager stopUpdatingLocation];
     
+    CLLocation *location = [_locationManager location];
+    float longitude = location.coordinate.longitude;
+    float latitude = location.coordinate.latitude;
+    
+    NSString *post = [NSString stringWithFormat:@"description=%@&user=%@&longitude=%f&latitude=%f&travel=%@", _desc.text, @"Sean", longitude, latitude, _travelId];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:[TPUrl createEventUrl:_travelId]]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    NSURLConnection *conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    if (conn) {
+        NSLog(@"Connection Successful");
+    }
+    else {
+        NSLog(@"Connection could not be made");
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,16 +69,11 @@
 -(IBAction)touchView:(id)sender
 {
     [_desc resignFirstResponder];
-    [_expense resignFirstResponder];
 }
 
--(IBAction)createEvent:(id)sender
+-(IBAction)doneEvent:(id)sender
 {
-    CLLocation *location = [_locationManager location];    
-    float longitude = location.coordinate.longitude;
-    float latitude = location.coordinate.latitude;
-    
-    NSString *post = [NSString stringWithFormat:@"description=%@&payer=%@&people=%@&expense=%@&longitude=%f&latitude=%f", _desc.text, @"Sean", _textView.text, _expense.text, longitude, latitude];
+    NSString *post = [NSString stringWithFormat:@"description=%@&id=%@", self.desc.text, self.eventId];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -77,8 +93,24 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
 {
-    UINavigationController *navController = self.navigationController;
-    [navController popViewControllerAnimated:YES];
+    NSError *error = nil;
+    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if ([jsonData objectForKey:@"eventID"]) {
+        self.eventId = [jsonData objectForKey:@"eventID"];
+    }
+    else {
+        UINavigationController *navController = self.navigationController;
+        [navController popViewControllerAnimated:YES];
+    }
+}
+
+-(IBAction)addExpense:(id)sender
+{
+    if (self.eventId) {
+        TPExpenseViewController *controller = [[TPExpenseViewController alloc] initWithNibName:@"TPExpenseViewController" bundle:nil];
+        controller.eventId = self.eventId;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 @end
