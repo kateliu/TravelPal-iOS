@@ -8,7 +8,11 @@
 
 #import "TPMapViewController.h"
 
+#import "TPHttpRequest.h"
+#import "TPUrl.h"
+
 @interface TPMapViewController () <MKMapViewDelegate>
+
 @end
 
 @implementation TPMapViewController
@@ -41,20 +45,14 @@
     if (!aView) {
         aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"MapVC"];
         aView.canShowCallout = YES;
-//        aView.leftCalloutAccessoryView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-        // could put a rightCalloutAccessoryView here
     }
 
     aView.annotation = annotation;
-//    [(UIImageView *)aView.leftCalloutAccessoryView setImage:nil];
-
     return aView;
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)aView
 {
-//    TPEvent *event = [self.delegate mapViewController:self eventForAnnotation:aView.annotation];
-//    [(UIImageView *)aView.leftCalloutAccessoryView setImage:image];
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
@@ -71,17 +69,36 @@
     return self;
 }
 
+- (NSDictionary *)detailInTravel
+{
+//    NSString *travelUrl = [[TPUrl travelsUrl] stringByAppendingString:self.travelID];
+//    NSDictionary *json = [NSDictionary dictionary];
+//    [self.httpRequest getFromURL:url returningJson:&json];
+//    if (!json) {
+//        return NO;
+//    }
+//
+    return nil;
+}
+
+- (NSDictionary *)detailInEvent:(NSString *)eventId
+{
+    return nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    MKCoordinateRegion mapRegion;
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 37.111;
-    coordinate.longitude = 121.111;
-    mapRegion.center = coordinate;
-    mapRegion.span.latitudeDelta = 10.0;
-    mapRegion.span.longitudeDelta = 10.0;
-    [self.mapView setRegion:mapRegion animated: YES];
+    self.travelID = @"-J42aiKDIcGz24EDoif3";
+
+//    MKCoordinateRegion mapRegion;
+//    CLLocationCoordinate2D coordinate;
+//    coordinate.latitude = 37.111;
+//    coordinate.longitude = 121.111;
+//    mapRegion.center = coordinate;
+//    mapRegion.span.latitudeDelta = 10.0;
+//    mapRegion.span.longitudeDelta = 10.0;
+//    [self.mapView setRegion:mapRegion animated: YES];
     self.mapView.delegate = self;
 }
 
