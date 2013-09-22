@@ -18,5 +18,6 @@
 @property (nonatomic, strong) UITableView *paymentTable;
 @property (nonatomic, strong) NSString *travelId;
 
+- (IBAction)makePayment:(id)sender;
 
 @end

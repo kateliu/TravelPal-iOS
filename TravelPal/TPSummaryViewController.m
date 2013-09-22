@@ -115,4 +115,9 @@
     }
 }
 
+- (IBAction)makePayment:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 @end
