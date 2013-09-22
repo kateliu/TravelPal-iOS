@@ -23,6 +23,8 @@
 		008D352B17EED3370062397F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352A17EED3370062397F /* Default@2x.png */; };
 		008D352D17EED3AF0062397F /* ios7_icon2_white_web.png in Resources */ = {isa = PBXBuildFile; fileRef = 008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */; };
 		4461DA5317EEED80001229CF /* LauchViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4461DA5217EEED80001229CF /* LauchViewBackground.png */; };
+		446BF1C517EF1C2E009DD47A /* Messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 446BF1C417EF1C2E009DD47A /* Messages.png */; };
+		446BF1C717EF23B0009DD47A /* DoneCircle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 446BF1C617EF23B0009DD47A /* DoneCircle.jpg */; };
 		44FCDC3317EE51AA007548C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3217EE51AA007548C5 /* UIKit.framework */; };
 		44FCDC3517EE51AA007548C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3417EE51AA007548C5 /* Foundation.framework */; };
 		44FCDC3717EE51AA007548C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FCDC3617EE51AA007548C5 /* CoreGraphics.framework */; };
@@ -79,6 +81,8 @@
 		008D352A17EED3370062397F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios7_icon2_white_web.png; sourceTree = "<group>"; };
 		4461DA5217EEED80001229CF /* LauchViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LauchViewBackground.png; sourceTree = "<group>"; };
+		446BF1C417EF1C2E009DD47A /* Messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Messages.png; sourceTree = "<group>"; };
+		446BF1C617EF23B0009DD47A /* DoneCircle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DoneCircle.jpg; sourceTree = "<group>"; };
 		44FCDC2F17EE51AA007548C5 /* TravelPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCDC3217EE51AA007548C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44FCDC3417EE51AA007548C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -214,6 +218,8 @@
 		44FCDC3917EE51AA007548C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				446BF1C617EF23B0009DD47A /* DoneCircle.jpg */,
+				446BF1C417EF1C2E009DD47A /* Messages.png */,
 				4461DA5217EEED80001229CF /* LauchViewBackground.png */,
 				44FCDC3A17EE51AA007548C5 /* TravelPal-Info.plist */,
 				44FCDC3B17EE51AA007548C5 /* InfoPlist.strings */,
@@ -322,8 +328,10 @@
 				44FCDC4717EE51AA007548C5 /* Default@2x.png in Resources */,
 				44FCDC4917EE51AA007548C5 /* Default-568h@2x.png in Resources */,
 				00479F5417EE56D600199C21 /* TPViewController.xib in Resources */,
+				446BF1C717EF23B0009DD47A /* DoneCircle.jpg in Resources */,
 				00479F5E17EE577E00199C21 /* TPPhotoViewController.xib in Resources */,
 				44FCDC7617EE5C9C007548C5 /* TPMapViewController.xib in Resources */,
+				446BF1C517EF1C2E009DD47A /* Messages.png in Resources */,
 				00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */,
 				4461DA5317EEED80001229CF /* LauchViewBackground.png in Resources */,
 				00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */,

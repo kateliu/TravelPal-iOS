@@ -58,6 +58,7 @@
     else {
         NSLog(@"Connection could not be made");
     }
+    self.doneButton.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning
