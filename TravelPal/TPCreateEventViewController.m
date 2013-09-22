@@ -57,7 +57,7 @@
     float longitude = location.coordinate.longitude;
     float latitude = location.coordinate.latitude;
     
-    NSString *post = [NSString stringWithFormat:@"description=%@&payer=%@&people=%@&expense=%@&longitude=%f&latitude=%f", _desc.text, @"Sean", _textView.text, _expense.text, longitude, latitude];
+    NSString *post = [NSString stringWithFormat:@"description=%@&user=%@&longitude=%f&latitude=%f&travel=%@", _desc.text, @"Sean", longitude, latitude, _travelId];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSString *postLength = [NSString stringWithFormat:@"%d",[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];

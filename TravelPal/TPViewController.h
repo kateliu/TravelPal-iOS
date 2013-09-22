@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UIButton *startButton;
 @property (nonatomic, strong) NSString *currentTravelId;
+@property (nonatomic, strong) NSString *currentTravelDesc;
 
 - (IBAction)enterTravel:(id)sender;
 

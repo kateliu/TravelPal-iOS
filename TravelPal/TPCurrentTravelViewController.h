@@ -10,13 +10,18 @@
 
 @interface TPCurrentTravelViewController : UIViewController {
     IBOutlet UITableView *_eventsTable;
+    IBOutlet UILabel *_travelNameLabel;
 }
 
 @property (nonatomic, strong) NSString *travelId;
 
+@property (nonatomic, strong) NSString *travelName;
+
 @property (nonatomic, strong) NSArray *events;
 
 @property (nonatomic, strong) UITableView *eventsTable;
+
+@property (nonatomic, strong) UILabel *travelNameLabel;
 
 - (IBAction)endTravel:(id)sender;
 

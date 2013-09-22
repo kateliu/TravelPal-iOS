@@ -15,6 +15,9 @@
 		00479F6817EE6AAF00199C21 /* TPRecentTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6617EE6AAF00199C21 /* TPRecentTripViewController.xib */; };
 		00479F6C17EE78D600199C21 /* TPCurrentTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */; };
 		00479F6D17EE78D600199C21 /* TPCurrentTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */; };
+		0064154F17EEF58F006A7096 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0064154E17EEF58F006A7096 /* background.png */; };
+		0064155317EEF7D1006A7096 /* TPExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064155117EEF7D1006A7096 /* TPExpenseViewController.m */; };
+		0064155417EEF7D1006A7096 /* TPExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */; };
 		008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 008D352217EEA8000062397F /* TPCreateEventViewController.m */; };
 		008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 008D352317EEA8000062397F /* TPCreateEventViewController.xib */; };
 		008D352717EEBC010062397F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008D352617EEBC000062397F /* CoreLocation.framework */; };
@@ -66,6 +69,10 @@
 		00479F6917EE78D600199C21 /* TPCurrentTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCurrentTravelViewController.h; sourceTree = "<group>"; };
 		00479F6A17EE78D600199C21 /* TPCurrentTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCurrentTravelViewController.m; sourceTree = "<group>"; };
 		00479F6B17EE78D600199C21 /* TPCurrentTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCurrentTravelViewController.xib; sourceTree = "<group>"; };
+		0064154E17EEF58F006A7096 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0064155017EEF7D1006A7096 /* TPExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPExpenseViewController.h; sourceTree = "<group>"; };
+		0064155117EEF7D1006A7096 /* TPExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPExpenseViewController.m; sourceTree = "<group>"; };
+		0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPExpenseViewController.xib; sourceTree = "<group>"; };
 		008D352117EEA8000062397F /* TPCreateEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCreateEventViewController.h; sourceTree = "<group>"; };
 		008D352217EEA8000062397F /* TPCreateEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCreateEventViewController.m; sourceTree = "<group>"; };
 		008D352317EEA8000062397F /* TPCreateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPCreateEventViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +141,7 @@
 		44FCDC2617EE51AA007548C5 = {
 			isa = PBXGroup;
 			children = (
+				0064154E17EEF58F006A7096 /* background.png */,
 				008D352C17EED3AF0062397F /* ios7_icon2_white_web.png */,
 				008D352A17EED3370062397F /* Default@2x.png */,
 				008D352617EEBC000062397F /* CoreLocation.framework */,
@@ -197,6 +205,9 @@
 				008D352117EEA8000062397F /* TPCreateEventViewController.h */,
 				008D352217EEA8000062397F /* TPCreateEventViewController.m */,
 				008D352317EEA8000062397F /* TPCreateEventViewController.xib */,
+				0064155017EEF7D1006A7096 /* TPExpenseViewController.h */,
+				0064155117EEF7D1006A7096 /* TPExpenseViewController.m */,
+				0064155217EEF7D1006A7096 /* TPExpenseViewController.xib */,
 			);
 			path = TravelPal;
 			sourceTree = "<group>";
@@ -318,6 +329,8 @@
 				008D352517EEA8000062397F /* TPCreateEventViewController.xib in Resources */,
 				008D352B17EED3370062397F /* Default@2x.png in Resources */,
 				008D352D17EED3AF0062397F /* ios7_icon2_white_web.png in Resources */,
+				0064154F17EEF58F006A7096 /* background.png in Resources */,
+				0064155417EEF7D1006A7096 /* TPExpenseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +377,7 @@
 				44FCDC8417EE94F6007548C5 /* TPHttpRequest.m in Sources */,
 				44FCDC8717EE9509007548C5 /* TPUrl.m in Sources */,
 				008D352417EEA8000062397F /* TPCreateEventViewController.m in Sources */,
+				0064155317EEF7D1006A7096 /* TPExpenseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

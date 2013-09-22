@@ -30,12 +30,17 @@
 {
     [super viewDidLoad];
     self.title = @"My Travel";
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     NSString *eventsUrl = [TPUrl travelEventsUrl:_travelId];
     TPHttpRequest *request = [[TPHttpRequest alloc] init];
     _events = [request getJsonFromUrl: eventsUrl];
     [_eventsTable reloadData];
     [self loadEvents];
 }
+
 
 - (void)loadEvents
 {
